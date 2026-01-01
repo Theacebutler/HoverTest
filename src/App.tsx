@@ -98,6 +98,9 @@ export function App() {
           </div>
         }
       </div>
+      <button>
+        <a href="https://google.com">Link in a button</a>
+      </button>
     </>
   );
 }
