@@ -93,19 +93,23 @@ export function App() {
           }
         </ul>
       </div>
-      <button
-        onClick={() => {
-          setHidden(!hidden)
-        }}
-      >Show hidden links</button>
-      {
-        !hidden && <div>
-          <a href="https://google.com">This is a hidden link</a>
-        </div>
-      }
-      <button>
-        <a href="https://google.com">Link in a button</a>
-      </button>
+      <div className="flex flex-col align-middle">
+        <button
+          onClick={() => {
+            setHidden(!hidden)
+          }}
+        >Show hidden links</button>
+        {
+          !hidden && <div className="items-center">
+            <li>
+              <a href="https://google.com">This is a hidden link</a>
+            </li>
+          </div>
+        }
+        <button>
+          <a href="https://google.com">Link in a button</a>
+        </button>
+      </div>
     </main >
   );
 }
