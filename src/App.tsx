@@ -92,19 +92,17 @@ export function App() {
             })
           }
         </ul>
-          </ul>
-        </div>
-        <button
-          onClick={() => {
-            setHidden(!hidden)
-          }}
-        >Show hidden links</button>
-        {
-          !hidden && <div>
-            <a href="https://google.com">This is a hidden link</a>
-          </div>
-        }
       </div>
+      <button
+        onClick={() => {
+          setHidden(!hidden)
+        }}
+      >Show hidden links</button>
+      {
+        !hidden && <div>
+          <a href="https://google.com">This is a hidden link</a>
+        </div>
+      }
     </main >
   );
 }
