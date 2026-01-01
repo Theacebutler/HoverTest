@@ -103,6 +103,9 @@ export function App() {
           <a href="https://google.com">This is a hidden link</a>
         </div>
       }
+      <button>
+        <a href="https://google.com">Link in a button</a>
+      </button>
     </main >
   );
 }
