@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { defaultLinks, type Link } from "./defaultsLinks"
-// import "./index.css";
+import "./index.css";
 
 
 export function App() {
@@ -42,52 +42,57 @@ export function App() {
 
 
   return (
-    <>
-      < form onSubmit={handelAddLink}>
-        <input type="text"
-          className="border-2 border-black"
-          placeholder="Add a link to test "
-          onChange={(e) => {
-            setHref(e.target.value)
-          }
-          }
-          value={href}
-          id="__input" />
-
-        <input type="text"
-          placeholder="Add text (optional)"
-          onChange={(e) => {
-            setText(e.target.value)
-          }
-          }
-          value={text} />
-        <button type="submit">
-          Add
-        </button>
-      </form >
-      <div className="">
-
-        <button
-          onClick={reset}
-        >Reset List / clear cache</button>
-        <div>
-          <ul>
-            {
-              linkList.map((link) => {
-                return <li>
-                  <a
-                    className=""
-                    key={link.id}
-                    href={link.href}>
-                    {link.text ? link.text : link.href}
-                  </a>
-                </li>
-              })
+    <main className="">
+      {/* input */}
+      <div className="flex items-center justify-center">
+        <form className=""
+          onSubmit={handelAddLink}>
+          <input type="text"
+            className=""
+            placeholder="Add a link to test "
+            onChange={(e) => {
+              setHref(e.target.value)
             }
-          </ul>
-        </div>
+            }
+            value={href}
+            id="__input" />
+
+          <input type="text"
+            className="m-px"
+            placeholder="Add text (optional)"
+            onChange={(e) => {
+              setText(e.target.value)
+            }
+            }
+            value={text} />
+          <button type="submit">
+            Add
+          </button>
+        </form >
+        <div className="">
+          <button
+            onClick={reset}
+          >Reset List / clear cache</button>
+        </div >
+      </div >
+      {/* link list */}
+      <div className="flex justify-center items-center">
+        <ul className="">
+          {
+            linkList.map((link) => {
+              return <li>
+                <a
+                  className=""
+                  key={link.id}
+                  href={link.href}>
+                  {link.text ? link.text : link.href}
+                </a>
+              </li>
+            })
+          }
+        </ul>
       </div>
-    </>
+    </main >
   );
 }
 
