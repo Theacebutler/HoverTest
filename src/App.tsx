@@ -16,6 +16,7 @@ export function App() {
 
   const [linkList, setLinkList] = useState<Link[]>(links())
 
+  const [hidden, setHidden] = useState<boolean>(true)
   const [href, setHref] = useState<string>("")
   const [text, setText] = useState<string>("")
 
@@ -91,6 +92,18 @@ export function App() {
             })
           }
         </ul>
+          </ul>
+        </div>
+        <button
+          onClick={() => {
+            setHidden(!hidden)
+          }}
+        >Show hidden links</button>
+        {
+          !hidden && <div>
+            <a href="https://google.com">This is a hidden link</a>
+          </div>
+        }
       </div>
     </main >
   );
