@@ -18,5 +18,14 @@ export const defaultLinks: Link[] = [
   }, {
     id: 4,
     href: "/samePage",
+  }, {
+    id: 5,
+    text: "a link with an emoji in the domain name",
+    href: "https://🏎️.com",
+  }, {
+    id: 6,
+    text: "a link with Cyrillic 'а' (U+0430) instead of Latin 'a'",
+    href: "https://pаypal.com",
   }
+
 ]
