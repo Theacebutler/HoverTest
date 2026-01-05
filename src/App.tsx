@@ -75,6 +75,11 @@ export function App() {
             onClick={reset}
           >Reset List / clear cache</button>
         </div >
+        <button
+          onClick={() => {
+            setHidden(!hidden)
+          }}
+        >Show hidden links</button>
       </div >
       {/* link list */}
       <div className="flex justify-center items-center">
@@ -91,24 +96,24 @@ export function App() {
               </li>
             })
           }
+          {
+            !hidden && <div className="items-center">
+              <li>
+                <a href="https://google.com">This is a hidden link</a>
+              </li>
+            </div>
+          }
         </ul>
       </div>
       <div className="flex flex-col align-middle">
-        <button
-          onClick={() => {
-            setHidden(!hidden)
-          }}
-        >Show hidden links</button>
-        {
-          !hidden && <div className="items-center">
-            <li>
-              <a href="https://google.com">This is a hidden link</a>
-            </li>
-          </div>
-        }
-        <button>
-          <a href="https://google.com">Link in a button</a>
-        </button>
+        {/* button in a tag */}
+        <div className="">
+          <a href="https://google.com">
+            <button>
+              A button in an a tag
+            </button>
+          </a>
+        </div>
       </div>
     </main >
   );
