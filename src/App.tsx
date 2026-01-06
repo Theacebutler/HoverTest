@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { defaultLinks, type Link } from "./defaultsLinks"
+import { defaultLinks, type Link } from "./defaultLinks"
 import "./index.css";
 
 
