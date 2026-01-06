@@ -36,7 +36,7 @@ export function App() {
     localStorage.setItem("links", JSON.stringify([...linkList, newLink]))
   }
   function reset() {
-    localStorage.clear()
+    localStorage.removeItem("links")
     setLinkList(defaultLinks)
   }
 
