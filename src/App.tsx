@@ -3,6 +3,7 @@ import { defaultLinks, type Link } from "./defaultLinks"
 import LinkList from "./LinkList";
 import Input from "./Input"
 import AddHidden from "./AddHidden";
+import LinkInBtn from "./LinkInBtn";
 import "./index.css";
 
 
@@ -29,11 +30,8 @@ export function App() {
       <Input setLinkList={setLinkList} linkList={linkList} />
       {/* link list */}
       <LinkList linkList={linkList} />
-        <button>
-          <a href="https://google.com">Link in a button</a>
-        </button>
-      </div>
       <AddHidden />
+      <LinkInBtn />
     </main >
   );
 }
