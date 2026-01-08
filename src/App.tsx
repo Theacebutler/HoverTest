@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { defaultLinks, type Link } from "./defaultLinks"
+import LinkList from "./LinkList";
 import "./index.css";
 
 
@@ -77,22 +78,7 @@ export function App() {
         </div >
       </div >
       {/* link list */}
-      <div className="flex justify-center items-center">
-        <ul className="">
-          {
-            linkList.map((link) => {
-              return <li>
-                <a
-                  className=""
-                  key={link.id}
-                  href={link.href}>
-                  {link.text ? link.text : link.href}
-                </a>
-              </li>
-            })
-          }
-        </ul>
-      </div>
+      <LinkList linkList={linkList} />
       <div className="flex flex-col align-middle">
         <button
           onClick={() => {
