@@ -20,7 +20,6 @@ export default function LinkList({ linkList }: { linkList: Link[] }) {
     >
       <a
         className=""
-        id={link.id.toString()}
         key={link.id}
         href={link.href}>
         {link.text ? link.text : link.href}
