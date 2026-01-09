@@ -20,18 +20,17 @@ export function App() {
 
   const [linkList, setLinkList] = useState<Link[]>(links())
 
-
-
-
-
   return (
     <main className="">
       {/* input */}
       <Input setLinkList={setLinkList} linkList={linkList} />
       {/* link list */}
-      <LinkList linkList={linkList} />
-      <AddHidden />
-      <LinkInBtn />
+      <div draggable
+      >
+        <AddHidden />
+        <LinkInBtn />
+        <LinkList linkList={linkList} />
+      </div>
     </main >
   );
 }
