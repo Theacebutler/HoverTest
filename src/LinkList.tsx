@@ -5,7 +5,7 @@ export default function LinkList({ linkList }: { linkList: Link[] }) {
 
 
   const links = linkList.map((link: Link) => {
-    return <SingleLink link={link} />
+    return <SingleLink link={link} key={link.id} />
   })
   return (
     <div className="flex justify-center items-center">
