@@ -2,19 +2,15 @@ import type { Link } from "./defaultLinks"
 
 export default function SingleLink({ link }: { link: Link }) {
 
-  const handleDrageStart = (event: React.DragEvent<HTMLLIElement>) => {
-    event.dataTransfer.setData('link', event.currentTarget.id)
-  }
-  const handleDrageEnd = (event: React.DragEvent<HTMLLIElement>) => {
-    event.currentTarget.style.position = "absolute"
-    event.currentTarget.style.top = `${event.clientY}px`
-    event.currentTarget.style.left = `${event.clientX}px`
+  const handleDrage = (e: React.DragEvent<HTMLLIElement>) => {
+    e.currentTarget.style.position = "absolute"
+    e.currentTarget.style.left = `${e.clientX}px`
+    e.currentTarget.style.top = `${e.clientY}px`
   }
   return <li
     draggable
-    onDragStart={handleDrageStart}
-    onDragEnd={handleDrageEnd}
-    id={`__li_id${link.id}`}
+    onDragEnd={handleDrage}
+  // onDragEnd={handleDrageEnd}
   >
     <a
       className=""
